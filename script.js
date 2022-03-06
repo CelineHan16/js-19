@@ -53,3 +53,11 @@ const interval = setInterval(() => {
 document.querySelector('#example-6 button').addEventListener('click', function(){
   clearInterval(interval);
 });
+
+const h1 = document.querySelector('#example-7');
+const interval1 = setInterval(() => {
+  span.textContent++;
+}, 500);
+document.querySelector('#example-6 button').addEventListener('click', function(){
+  clearInterval(interval);
+});
