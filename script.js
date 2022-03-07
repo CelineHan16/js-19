@@ -55,9 +55,17 @@ document.querySelector('#example-6 button').addEventListener('click', function()
 });
 
 const h1 = document.querySelector('#example-7');
-const interval1 = setInterval(() => {
-  span.textContent++;
+let randomColor;
+document.querySelector('#start_btn').addEventListener('click', function() {
+  randomColor = setInterval(() => {
+    // clearInterval(randomColor);
+    h1.style.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
 }, 500);
-document.querySelector('#example-6 button').addEventListener('click', function(){
-  clearInterval(interval);
 });
+document.querySelector('#stop_btn').addEventListener('click', function() {
+  clearInterval(randomColor);
+})
+// 
+// document.querySelector('#example-6 button').addEventListener('click', function(){
+//   clearInterval(interval);
+// });
